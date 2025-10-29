@@ -7,20 +7,20 @@ public class Ex04_3 {
 
     public static void main(String[] args) {
 
+        System.out.println("Ordem decrescente");
+
         Scanner input = new Scanner (System.in);
-        int[] numeros= new int[4];
 
-        System.out.println("Valor do maior para o mais pequeno");
+        int[] numeros = new int[4];
 
-        for (int i = 0; i < 4; i++) {
-            System.out.print("Introduza o número " + (i +1) + ": ");
+        for (int i=0; i<4; i++) {
+            System.out.print("Introduza o número " + (i + 1) + ": ");
             numeros[i] = input.nextInt();
         }
 
         Arrays.sort(numeros);
 
-        System.out.print("Ordem crescente: ");
-        for (int i = 3; i >= 0; i--) {
+        for (int i=3; i >= 0; i--) {
             System.out.print(numeros[i]);
             if (i > 0) System.out.print(" | ");
         }

@@ -2,7 +2,7 @@ package Ficha02;
 
 import java.util.Scanner;
 
-public class Ex04 {
+public class Ex04_1 {
 
     public static void main(String[] args) {
 
@@ -68,7 +68,7 @@ public class Ex04 {
 
             pontos = 1;
 
-            System.out.println("Ganhou: " + pontos + " pontos");
+            System.out.println("Ganhou: " + pontos + " ponto");
         }
 
         if (posicao > 8) {

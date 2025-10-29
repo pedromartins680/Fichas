@@ -15,6 +15,5 @@ public class Ex04 {
         System.out.print("Qual foi a sua posição?");
         posicao = input.nextInt();
 
-        if ()
     }
 }

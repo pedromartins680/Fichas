@@ -2,7 +2,7 @@ package Ficha01;
 
 import java.util.Scanner;
 
-public class Ex0602 {
+public class Ex06_2 {
 
     public static void main(String[] args) {
 

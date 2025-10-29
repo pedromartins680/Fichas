@@ -10,7 +10,7 @@ public class Ex05 {
 
         double numero1, numero2;
 
-        System.out.println("Valor do número mais pequeno para o maior");
+        System.out.println("Ordem crescente");
 
         System.out.print("Introduza um número: ");
         numero1 = input.nextDouble();

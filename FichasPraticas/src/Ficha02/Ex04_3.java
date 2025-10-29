@@ -20,7 +20,7 @@ public class Ex04_3 {
 
         Arrays.sort(numeros);
 
-        for (int i=3; i >= 0; i--) {
+        for (int i = 3; i >= 0; i--) {
             System.out.print(numeros[i]);
             if (i > 0) System.out.print(" | ");
         }

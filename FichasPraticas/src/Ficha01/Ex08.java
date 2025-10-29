@@ -51,6 +51,6 @@ public class Ex08 {
         System.out.print("O total dá: " + horas + "h");
         System.out.print(minutos + "m");
         System.out.print(segundos + "s");
-        
+
     }
 }

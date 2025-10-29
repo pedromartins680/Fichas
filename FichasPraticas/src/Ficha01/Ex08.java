@@ -44,6 +44,7 @@ public class Ex08 {
 
         totalminutos = (m1m * 60) + (m2m * 60) + (m3m * 60) + (m4m * 60) + (m5m * 60);
         totalsegundos = totalminutos + m1s + m2s + m3s + m4s + m5s;
+
         horas = totalsegundos / 3600;
         minutos = (totalsegundos % 3600) / 60;
         segundos = totalsegundos % 60;

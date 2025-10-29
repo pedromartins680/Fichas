@@ -10,7 +10,7 @@ public class Ex08 {
 
         System.out.println("Calcular a duração total de 5 músicas");
 
-        int m1m, m1s, m2m, m2s, m3m, m3s, m4m, m4s, m5m, m5s, horas, totalsegundos, totalminutos, minutos, segundos;
+        int m1m, m1s, m2m, m2s, m3m, m3s, m4m, m4s, m5m, m5s, horas, totalsegundos, totalminutos, minutos, segundos, segundos2;
 
         System.out.print("Introduza os minutos da primeira música:");
         m1m = input.nextInt();
@@ -46,17 +46,11 @@ public class Ex08 {
         totalsegundos = totalminutos + m1s + m2s + m3s + m4s + m5s;
         horas = totalsegundos / 3600;
         minutos = (totalsegundos % 3600) / 60;
-        segundos = (totalsegundos % 3600) % 60;
-
+        segundos = totalsegundos % 60;
 
         System.out.print("O total dá: " + horas + "h");
         System.out.print(minutos + "m");
-        System.out.print(segundos + "segundos.");
-
-
-
-
-
-
+        System.out.print(segundos + "s");
+        
     }
 }

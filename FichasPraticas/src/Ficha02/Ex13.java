@@ -18,21 +18,29 @@ public class Ex13 {
         System.out.print("Introduza os minutos: ");
         minutos = input.nextInt();
 
-        System.out.println("Formato 24h: " + horas + "h" + minutos + "minutos.");
+        System.out.println("Formato 24h: " + horas + "h" + minutos);
 
         if (horas <= 12) {
 
             System.out.println("Após conversão: ");
-            System.out.println("Formato 12h: " + horas + "h" + minutos);
+            System.out.println("Formato 12h: " + horas + "h" + minutos + " AM");
 
         }
 
-        else {
+        if (horas > 12 && horas < 24) {
 
             horas = horas - 12;
 
             System.out.println("Após conversão: ");
-            System.out.println("Formato 12h: " + horas + "h" + minutos + "minutos PM");
+            System.out.println("Formato 12h: " + horas + "h" + minutos + " PM");
         }
+
+        if (horas == 24) {
+
+            System.out.println("Após conversão: ");
+            System.out.println("Formato 12h: 00h" + minutos + " AM");
+        }
+
+
     }
 }

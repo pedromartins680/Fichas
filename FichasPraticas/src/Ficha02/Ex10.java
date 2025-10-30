@@ -8,15 +8,15 @@ public class Ex10 {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Realize a operação desejada entre 2 números");
+        System.out.println("Realize a operação desejada entre 2 números ");
 
         double valor1, valor2, resultado;
         String operacao;
 
-        System.out.print("Introduza o primeiro número:");
+        System.out.print("Introduza o primeiro número: ");
         valor1 = input.nextDouble();
 
-        System.out.print("Introduza a operação aritmética pretendida(+, -, /, *, %):");
+        System.out.print("Introduza a operação aritmética pretendida(+, -, /, *, %): ");
         operacao = input.next();
         
         System.out.print("Introduza o segundo número:");

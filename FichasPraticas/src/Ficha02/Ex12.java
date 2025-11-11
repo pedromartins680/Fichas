@@ -36,7 +36,6 @@ public class Ex12 {
                 break;
 
             case 4:
-                System.out.print("Selecionou a opção 4: Sair." );
                 break;
 
             default:

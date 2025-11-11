@@ -15,11 +15,14 @@ public class Ex05 {
         String mensagem;
         valor = 0;
 
-        System.out.print("Escreva a mensagem pretendida: ");
-        mensagem = input.nextLine();
-
         System.out.print("Quantas vezes quer imprimir? ");
         numero = input.nextInt();
+
+        System.out.print("Escreva a mensagem pretendida: ");
+        input.nextLine();
+        mensagem = input.nextLine();
+
+
 
         while ( valor >= 0 && valor < numero) {
 

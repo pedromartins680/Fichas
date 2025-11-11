@@ -24,7 +24,7 @@ public class Ex08 {
 
         ponderada = (valor1 * 0.25) + (valor2 * 0.35) + (valor3 * 0.40);
 
-        if ( ponderada > 9.5) {
+        if ( ponderada >= 9.5) {
 
             System.out.printf("O aluno aprovou com: %.0f", ponderada);
         }

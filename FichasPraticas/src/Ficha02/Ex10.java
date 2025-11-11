@@ -28,27 +28,31 @@ public class Ex10 {
 
             case "+":
                 resultado = valor1 + valor2;
-                System.out.print("O resultado é: " + resultado);
+                System.out.print("A soma é: " + resultado);
                 break;
 
             case "-":
                 resultado = valor1 - valor2;
-                System.out.print("O resultado é: " + resultado);
+                System.out.print("A substração é: " + resultado);
                 break;
 
             case "*":
                 resultado = valor1 * valor2;
-                System.out.print("O resultado é: " + resultado);
+                System.out.print("A multiplicação é: " + resultado);
                 break;
 
             case "/":
                 resultado = valor1 / valor2;
-                System.out.print("O resultado é: " + resultado);
+                System.out.print("A divisão é: " + resultado);
                 break;
 
             case "%":
                 resultado = valor1 % valor2;
-                System.out.print("O resultado é: " + resultado);
+                System.out.print("O resto é: " + resultado);
+                break;
+
+            default:
+                System.out.println("Operação não reconhecida!");
                 break;
 
         }

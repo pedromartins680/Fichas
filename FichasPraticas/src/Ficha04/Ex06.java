@@ -14,6 +14,8 @@ public class Ex06 {
         System.out.print("Jogador 1 introduza um número entre 0 a 100: ");
         numero1 = input.nextInt();
 
+        System.out.println();
+
         while (numero1 < 0 || numero1 > 100) {
             System.out.print("Jogador 1 introduza um número ENTRE 0 a 100 INCLUSIVE: ");
             numero1 = input.nextInt();
@@ -25,11 +27,11 @@ public class Ex06 {
             numero2 = input.nextInt();
 
             if (numero2 > numero1) {
-                System.out.println("O número é menor!");
+                System.out.println("O número é menor!\n");
             }
 
             if (numero2 < numero1) {
-                System.out.println("O número é maior!");
+                System.out.println("O número é maior!\n");
             }
 
             contador = contador + 1;
@@ -38,8 +40,8 @@ public class Ex06 {
 
 
         System.out.println("----------------------------------------------------");
-        System.out.println("Acertou! O número é: " + numero1);
-        System.out.println("Precisou de " + contador + " tentativas");
+        System.out.println("\nAcertou! O número é: " + numero1);
+        System.out.println("Precisou de " + contador + " tentativas\n");
         System.out.println("----------------------------------------------------");
 
 

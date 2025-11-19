@@ -18,7 +18,7 @@ public class Ex08 {
 
 
         System.out.println("Números - 5:");
-        while ( valor < numero + 1 && valor > numero -5 ) {
+        while (valor > numero -5 ) {
 
             valor = valor - 1;
             System.out.println(valor);
@@ -28,7 +28,7 @@ public class Ex08 {
 
 
         System.out.println("Números + 5:");
-        while ( valor > numero - 1 && valor < numero +5 ) {
+        while (valor < numero +5 ) {
 
             valor = valor + 1;
             System.out.println(valor);

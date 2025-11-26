@@ -24,6 +24,7 @@ public class Ex11 {
                 System.out.println(valor);
                 valor = valor + salto;
             }
+
             while (valor > numero -1) {
                 System.out.println(valor);
                 valor = valor - salto;

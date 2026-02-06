@@ -41,7 +41,7 @@ public class Ex04 {
                     break;
 
                 case "*":
-                    resultado = numero1 - numero2;
+                    resultado = numero1 * numero2;
                     System.out.println("A Multiplicação é: " + resultado);
                     break;
 
@@ -52,8 +52,8 @@ public class Ex04 {
             }
 
             System.out.println("Deseja continuar? (s / n)");
-            continuar = input.next()
-            ;
+            continuar = input.next().toLowerCase();
+
             if (continuar.equals("n")) {
                 s = false;
             }

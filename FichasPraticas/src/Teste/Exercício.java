@@ -69,6 +69,10 @@ public class Exercício {
                         System.out.println("-----------------");
                         System.out.println("Empate!");
                     }
+
+
+
+
                     break;
 
                 case 9:
@@ -83,6 +87,7 @@ public class Exercício {
                     break;
             }
 
+            if (!login) break;
             System.out.println("-----------------");
             System.out.println("Deseja jogar outra vez? ");
             System.out.println("1. Continuar");

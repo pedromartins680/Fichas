@@ -52,13 +52,13 @@ public class Funções {
                 break;
 
             case 8:
-                if(!matriz[2][1].equals("8")){
+                if (!matriz[2][1].equals("8")) {
                     return true;
                 }
                 break;
 
             case 9:
-                if(!matriz[2][2].equals("9")){
+                if (!matriz[2][2].equals("9")) {
                     return true;
                 }
                 break;
@@ -68,7 +68,6 @@ public class Funções {
 
         return false;
     }
-
 
     public static void imprimirMatriz(String[][] matriz) {
 
@@ -87,19 +86,23 @@ public class Funções {
     public static String[][] jogador01_joga(String[][] matriz) {
 
         Scanner input = new Scanner(System.in);
-        int num, posicao = 0;
+        int posicao = 0;
         boolean jogadaValida = false;
 
         while (!jogadaValida) {
             jogadaValida = true;
 
+            System.out.println("-----------------");
             System.out.print("Introduza a posição em que quer jogar (Jogador 1 [X]):  ");
             posicao = input.nextInt();
             if (posicao < 1 || posicao > 9) {
+                System.out.println("-----------------");
                 System.out.println("Escolha uma posição válida! ( 1 - 9 )");
                 jogadaValida = false;
             } else if (jaEstaOcupada(matriz, posicao)) {
                 jogadaValida = false;
+                System.out.println("-----------------");
+                System.out.println("Posição ocupada!");
             }
         }
 
@@ -142,6 +145,7 @@ public class Funções {
                 break;
 
             default:
+                System.out.println("-----------------");
                 System.out.println(" Introduza uma posição válida! ( 1 - 9 )");
                 break;
 
@@ -159,13 +163,17 @@ public class Funções {
         while (!jogadaValida) {
             jogadaValida = true;
 
+            System.out.println("-----------------");
             System.out.print("Introduza a posição em que quer jogar (Jogador 2 [O]):  ");
             posicao = input.nextInt();
             if (posicao < 1 || posicao > 9) {
+                System.out.println("-----------------");
                 System.out.println("Escolha uma posição válida! ( 1 - 9 )");
                 jogadaValida = false;
             } else if (jaEstaOcupada(matriz, posicao)) {
                 jogadaValida = false;
+                System.out.println("-----------------");
+                System.out.println("Posição ocupada!");
             }
         }
 
@@ -208,6 +216,7 @@ public class Funções {
                 break;
 
             default:
+                System.out.println("-----------------");
                 System.out.println(" Introduza uma posição válida! ( 1 - 9 )");
                 break;
 
@@ -232,23 +241,115 @@ public class Funções {
 
     }
 
+    public static boolean vencedor1(String[][] matriz) {
 
-    public static void main(String[] args) {
+        boolean vencedor = false;
 
+        if (matriz[0][0].equals("X") && matriz[0][1].equals("X") && matriz[0][2].equals("X")) {
 
-        String[][] matriz = new String[3][3];
+            vencedor = true;
 
-        matriz = preencher_Matriz(matriz);
+        }
 
-        imprimirMatriz(matriz);
+        if (matriz[1][0].equals("X") && matriz[1][1].equals("X") && matriz[1][2].equals("X")) {
 
-        matriz = jogador01_joga(matriz);
+            vencedor = true;
 
-        imprimirMatriz(matriz);
+        }
 
-        matriz = jogador02_joga(matriz);
+        if (matriz[2][0].equals("X") && matriz[2][1].equals("X") && matriz[2][2].equals("X")) {
 
-        imprimirMatriz(matriz);
+            vencedor = true;
 
+        }
+
+        if (matriz[0][0].equals("X") && matriz[1][0].equals("X") && matriz[2][0].equals("X")) {
+
+            vencedor = true;
+
+        }
+
+        if (matriz[0][1].equals("X") && matriz[1][1].equals("X") && matriz[2][1].equals("X")) {
+
+            vencedor = true;
+
+        }
+
+        if (matriz[0][2].equals("X") && matriz[1][2].equals("X") && matriz[2][2].equals("X")) {
+
+            vencedor = true;
+
+        }
+
+        if (matriz[0][0].equals("X") && matriz[1][1].equals("X") && matriz[2][2].equals("X")) {
+
+            vencedor = true;
+
+        }
+
+        if (matriz[0][2].equals("X") && matriz[1][1].equals("X") && matriz[2][0].equals("X")) {
+
+            vencedor = true;
+
+        }
+
+        return vencedor;
     }
+
+    public static boolean vencedor2(String[][] matriz) {
+
+        boolean vencedor = false;
+
+        if (matriz[0][0].equals("O") && matriz[0][1].equals("O") && matriz[0][2].equals("O")) {
+
+            vencedor = true;
+
+        }
+
+        if (matriz[1][0].equals("O") && matriz[1][1].equals("O") && matriz[1][2].equals("O")) {
+
+            vencedor = true;
+
+        }
+
+        if (matriz[2][0].equals("O") && matriz[2][1].equals("O") && matriz[2][2].equals("O")) {
+
+            vencedor = true;
+
+        }
+
+        if (matriz[0][0].equals("O") && matriz[1][0].equals("O") && matriz[2][0].equals("O")) {
+
+            vencedor = true;
+
+        }
+
+        if (matriz[0][1].equals("O") && matriz[1][1].equals("O") && matriz[2][1].equals("O")) {
+
+            vencedor = true;
+
+        }
+
+        if (matriz[0][2].equals("O") && matriz[1][2].equals("O") && matriz[2][2].equals("O")) {
+
+            vencedor = true;
+
+        }
+
+        if (matriz[0][0].equals("O") && matriz[1][1].equals("O") && matriz[2][2].equals("O")) {
+
+            vencedor = true;
+
+        }
+
+        if (matriz[0][2].equals("O") && matriz[1][1].equals("O") && matriz[2][0].equals("O")) {
+
+            vencedor = true;
+
+        }
+
+        return vencedor;
+    }
+
+
 }

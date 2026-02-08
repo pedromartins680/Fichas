@@ -2,31 +2,45 @@ package Teste;
 
 import java.util.Scanner;
 
-import static Teste.Funções.*;
+import static Teste.Funções_Diamantes.*;
 
-public class Exercício {
+public class ExercicioDiamantes {
 
-    public static void main(String[] args) {
+    public static void Diamantes() {
 
         Scanner input = new Scanner(System.in);
 
-
-        int opcao = 1;
+        String[][] matriz = new String[6][6];
+        int[] vetor = new int[5];
         boolean login = true;
+        int opcao = 1;
 
-        String[][] matriz = new String[3][3];
 
         do {
+
+
+
 
             int jogador = 1;
             int vencedor = 0;
             int contador = 1;
-            matriz = preencher_Matriz(matriz);
+            matriz = preencherMatriz(matriz);
 
 
             switch (opcao) {
 
                 case 1:
+
+                        vetor = diamantes(vetor);
+                        System.out.println("------------------");
+
+                        for (int i = 0; i < vetor.length; i++) {
+
+                            System.out.print("|" + vetor[i] + "|");
+                        }
+                    System.out.println();
+                    System.out.println("------------------");
+                    System.out.println("Diamantes para facilitar a sua vida");
 
                     imprimirMatriz(matriz);
 
@@ -34,45 +48,43 @@ public class Exercício {
 
                         if (jogador == 1) {
 
-                            jogador01_joga(matriz);
+                            jogador1(matriz, vetor);
                             imprimirMatriz(matriz);
                             jogador++;
                             contador++;
 
                         } else if (jogador == 2) {
 
-                            jogador02_joga(matriz);
+                            jogador2(matriz, vetor);
                             imprimirMatriz(matriz);
                             jogador--;
                             contador++;
 
                         }
 
-                        if (vencedor1(matriz)) {
+                        if (vitoria1(matriz)) {
 
                             vencedor = 1;
                             System.out.println("-----------------");
                             System.out.println("Jogador 1 ganhou!");
+                            break;
                         }
 
-                        if (vencedor2(matriz)) {
+                        if (vitoria2(matriz)) {
 
                             vencedor = 2;
                             System.out.println("-----------------");
                             System.out.println("Jogador 2 ganhou!");
+                            break;
                         }
 
-                    } while (contador < 10 && vencedor < 1);
+                    } while (contador < 37);
 
-                    if (!vencedor1(matriz) && !vencedor2(matriz)) {
+                    if (!vitoria1(matriz) && !vitoria2(matriz)) {
 
                         System.out.println("-----------------");
                         System.out.println("Empate!");
                     }
-
-
-
-
                     break;
 
                 case 9:
@@ -95,6 +107,8 @@ public class Exercício {
             System.out.println("-----------------");
             opcao = input.nextInt();
 
+
         } while (login);
     }
 }
+

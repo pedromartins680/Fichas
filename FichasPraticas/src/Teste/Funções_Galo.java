@@ -2,7 +2,7 @@ package Teste;
 
 import java.util.Scanner;
 
-public class Funções {
+public class Funções_Galo {
 
     public static boolean jaEstaOcupada(String[][] matriz, int posicao) {
 
@@ -69,15 +69,16 @@ public class Funções {
         return false;
     }
 
-    public static void imprimirMatriz(String[][] matriz) {
+    public static void imprimirMatrizz(String[][] matriz) {
 
-        System.out.println("---------");
+        System.out.println("-------");
 
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[0].length; j++) {
-                System.out.print("|" + matriz[i][j] + "|");
+                System.out.print("|" + matriz[i][j]);
             }
-            System.out.println("\n---------");
+            System.out.print("|");
+            System.out.println("\n-------");
 
         }
 

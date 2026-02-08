@@ -7,6 +7,11 @@ import java.util.Scanner;
 
 public class Funções_Diamantes {
 
+    /**
+     * Preenche a matriz numericamente
+     * @param matriz
+     * @return
+     */
     public static String[][] preencherMatriz(String[][] matriz) {
 
         Integer contador = 1;
@@ -28,6 +33,11 @@ public class Funções_Diamantes {
         return matriz;
     }
 
+    /**
+     * Imprime a matriz atualizada
+     * @param matriz
+     * @return
+     */
     public static String[][] imprimirMatriz(String[][] matriz) {
 
         System.out.println("------------------");
@@ -46,6 +56,11 @@ public class Funções_Diamantes {
         return matriz;
     }
 
+    /**
+     * Cria 5 números aleatórios de 1 a 36 inclusive para os diamantes
+     * @param vetor
+     * @return
+     */
     public static int[] diamantes(int[] vetor) {
 
         Random rd = new Random();
@@ -73,6 +88,12 @@ public class Funções_Diamantes {
         return vetor;
     }
 
+    /**
+     * Simula a jogada para o jogador 1, atualizando a matriz de acordo com a jogada
+     * @param matriz
+     * @param vetor
+     * @return
+     */
     public static String[][] jogador1(String[][] matriz, int[] vetor) {
 
         Scanner input = new Scanner(System.in);
@@ -151,6 +172,12 @@ public class Funções_Diamantes {
         return matriz;
     }
 
+    /**
+     * Simula a jogada para o jogador 2, atualizando a matriz de acordo com a jogada
+     * @param matriz
+     * @param vetor
+     * @return
+     */
     public static String[][] jogador2(String[][] matriz, int[] vetor) {
 
         Scanner input = new Scanner(System.in);
@@ -229,6 +256,11 @@ public class Funções_Diamantes {
         return matriz;
     }
 
+    /**
+     * Testa a condição de vitória para o jogador 1
+     * @param matriz
+     * @return
+     */
     public static boolean vitoria1(String[][] matriz) {
 
         int contador = 0;
@@ -253,6 +285,11 @@ public class Funções_Diamantes {
         return ganhou;
     }
 
+    /**
+     * Testa a condição de vitória para o jogador 2
+     * @param matriz
+     * @return
+     */
     public static boolean vitoria2(String[][] matriz) {
 
         int contador = 0;

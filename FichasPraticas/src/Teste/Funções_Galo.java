@@ -4,6 +4,12 @@ import java.util.Scanner;
 
 public class Funções_Galo {
 
+    /**
+     * Verifica se a jogada é válida
+     * @param matriz
+     * @param posicao
+     * @return
+     */
     public static boolean jaEstaOcupada(String[][] matriz, int posicao) {
 
 
@@ -69,6 +75,10 @@ public class Funções_Galo {
         return false;
     }
 
+    /**
+     * Imprime a matriz atualizada
+     * @param matriz
+     */
     public static void imprimirMatrizz(String[][] matriz) {
 
         System.out.println("-------");
@@ -84,6 +94,11 @@ public class Funções_Galo {
 
     }
 
+    /**
+     * Simula a jogada do jogador 1
+     * @param matriz
+     * @return
+     */
     public static String[][] jogador01_joga(String[][] matriz) {
 
         Scanner input = new Scanner(System.in);
@@ -155,6 +170,11 @@ public class Funções_Galo {
         return matriz;
     }
 
+    /**
+     * Simula a jogada do jogador 2
+     * @param matriz
+     * @return
+     */
     public static String[][] jogador02_joga(String[][] matriz) {
 
         Scanner input = new Scanner(System.in);
@@ -226,6 +246,11 @@ public class Funções_Galo {
         return matriz;
     }
 
+    /**
+     * Preenche a matriz numericamente
+     * @param matriz
+     * @return
+     */
     public static String[][] preencher_Matriz(String[][] matriz) {
 
         Integer contador = 1;
@@ -242,6 +267,11 @@ public class Funções_Galo {
 
     }
 
+    /**
+     * Testa a condição de vitória do jogador 1
+     * @param matriz
+     * @return
+     */
     public static boolean vencedor1(String[][] matriz) {
 
         boolean vencedor = false;
@@ -297,6 +327,11 @@ public class Funções_Galo {
         return vencedor;
     }
 
+    /**
+     * Testa a condição de vitória do jogador 2
+     * @param matriz
+     * @return
+     */
     public static boolean vencedor2(String[][] matriz) {
 
         boolean vencedor = false;

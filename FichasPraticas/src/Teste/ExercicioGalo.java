@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import static Teste.Funções_Galo.*;
 
-public class ExercícioGalo {
+public class ExercicioGalo {
 
     public static void Galo() {
 

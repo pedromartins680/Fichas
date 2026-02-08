@@ -19,8 +19,6 @@ public class ExercicioDiamantes {
         do {
 
 
-
-
             int jogador = 1;
             int vencedor = 0;
             int contador = 1;
@@ -31,13 +29,16 @@ public class ExercicioDiamantes {
 
                 case 1:
 
-                        vetor = diamantes(vetor);
-                        System.out.println("------------------");
+                    int pontos1 = 0;
+                    int pontos2 = 0;
 
-                        for (int i = 0; i < vetor.length; i++) {
+                    vetor = diamantes(vetor);
+                    System.out.println("------------------");
 
-                            System.out.print("|" + vetor[i] + "|");
-                        }
+                    for (int i = 0; i < vetor.length; i++) {
+
+                        System.out.print("|" + vetor[i] + "|");
+                    }
                     System.out.println();
                     System.out.println("------------------");
                     System.out.println("Diamantes para facilitar a sua vida");
@@ -53,12 +54,58 @@ public class ExercicioDiamantes {
                             jogador++;
                             contador++;
 
+                            for (int i = 0; i < matriz.length; i++) {
+
+                                for (int j = 0; j < matriz[0].length; j++) {
+
+                                    if (matriz[i][j].equals("D1")) {
+
+                                        pontos1++;
+                                    }
+
+                                }
+
+                            }
+
+                            if (pontos1<2) {
+                                System.out.println("------------------");
+                                System.out.println("Jogador 1: " + pontos1 + " ponto");
+                                pontos1 = 0;
+                            } else {
+                                System.out.println("------------------");
+                                System.out.println("Jogador 1: " + pontos1 + " pontos");
+                                pontos1 = 0;
+                            }
+
                         } else if (jogador == 2) {
 
                             jogador2(matriz, vetor);
                             imprimirMatriz(matriz);
                             jogador--;
                             contador++;
+
+                            for (int i = 0; i < matriz.length; i++) {
+
+                                for (int j = 0; j < matriz[0].length; j++) {
+
+                                    if (matriz[i][j].equals("D2")) {
+
+                                        pontos2++;
+                                    }
+
+                                }
+
+                            }
+
+                            if (pontos2<2) {
+                                System.out.println("------------------");
+                                System.out.println("Jogador 2: " + pontos2 + " ponto");
+                                pontos2 = 0;
+                            } else {
+                                System.out.println("------------------");
+                                System.out.println("Jogador 2: " + pontos2 + " pontos");
+                                pontos2 = 0;
+                            }
 
                         }
 

@@ -40,7 +40,7 @@ public class Funções_Diamantes {
      */
     public static String[][] imprimirMatriz(String[][] matriz) {
 
-        System.out.println("------------------");
+        System.out.println("-------------------");
 
         for (int i = 0; i < matriz.length; i++) {
 
@@ -50,7 +50,8 @@ public class Funções_Diamantes {
 
             }
 
-            System.out.println("\n------------------");
+            System.out.print("|");
+            System.out.println("\n-------------------");
 
         }
         return matriz;
@@ -106,7 +107,7 @@ public class Funções_Diamantes {
         do {
 
             System.out.println("------------------");
-            System.out.print("Escolha a posição em que quer jogar Jogador 1 ( 1 - 36 ): ");
+            System.out.print("Escolha a posição em que quer jogar Jogador 1: ");
             num = input.nextInt();
 
             int linha = (num - 1) / 6;
@@ -190,7 +191,7 @@ public class Funções_Diamantes {
         do {
 
             System.out.println("------------------");
-            System.out.print("Escolha a posição em que quer jogar Jogador 2 ( 1 - 36 ): ");
+            System.out.print("Escolha a posição em que quer jogar Jogador 2: ");
             num = input.nextInt();
 
             int linha = (num - 1) / 6;

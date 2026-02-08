@@ -21,7 +21,7 @@ public class Final {
 
             switch (num) {
 
-                case 1: ExercícioGalo.Galo();
+                case 1: ExercicioGalo.Galo();
                 break;
 
                 case 2: ExercicioDiamantes.Diamantes();
